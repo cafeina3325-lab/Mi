@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0f0f12;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Remove scrollbars so the canvas fits exactly */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place canvas behind text */
+  pointer-events: none; /* Let pointer events pass through to underlying elements if any */
+}
+
+#content {
+  text-align: center;
+  z-index: 10;
+  pointer-events: none; /* Let mouse easily interact with canvas underneath (although we are listening on window so it doesn't matter too much, but good practice) */
+}
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: -0.05em;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #A2C2E1, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 30px rgba(162, 194, 225, 0.3);
+}
+
+p {
+  font-size: 1.2rem;
+  color: #888899;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
